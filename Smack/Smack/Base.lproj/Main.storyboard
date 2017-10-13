@@ -1,24 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rhE-zD-Auh"/>
+                        <viewControllerLayoutGuide type="bottom" id="C8e-xF-QBr"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="pm9-94-mUP" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="RtL-gO-gpE"/>
+                        <segue destination="1aL-5V-VW4" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="MVk-Yo-lov"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--ChatVC-->
+        <scene sceneID="p5E-bm-PMT">
+            <objects>
+                <viewController id="1aL-5V-VW4" customClass="ChatVC" customModule="Smack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="44b-xU-BL6"/>
+                        <viewControllerLayoutGuide type="bottom" id="g5s-1q-nN5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="m1v-RR-Lk3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmO-vB-Naw" customClass="GradientView" customModule="Smack" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogs-95-TWD">
+                                        <rect key="frame" x="12" y="47" width="24" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="ugj-36-2zV"/>
+                                            <constraint firstAttribute="width" constant="24" id="xhm-GI-fcl"/>
+                                        </constraints>
+                                        <state key="normal" image="smackBurger"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHe-lX-zy8">
+                                        <rect key="frame" x="161" y="45.5" width="52" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29019607843137252" green="0.30196078431372547" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ogs-95-TWD" secondAttribute="bottom" constant="12" id="1tP-bf-zx5"/>
+                                    <constraint firstAttribute="height" constant="77" id="Jfj-lx-DoY"/>
+                                    <constraint firstItem="Ogs-95-TWD" firstAttribute="leading" secondItem="JmO-vB-Naw" secondAttribute="leading" constant="12" id="fSL-HS-Tek"/>
+                                    <constraint firstItem="NHe-lX-zy8" firstAttribute="centerY" secondItem="Ogs-95-TWD" secondAttribute="centerY" id="l4a-oA-26z"/>
+                                    <constraint firstItem="NHe-lX-zy8" firstAttribute="centerX" secondItem="JmO-vB-Naw" secondAttribute="centerX" id="u9R-uG-aGY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JmO-vB-Naw" firstAttribute="trailing" secondItem="m1v-RR-Lk3" secondAttribute="trailing" id="ROM-8y-Nsa"/>
+                            <constraint firstItem="JmO-vB-Naw" firstAttribute="leading" secondItem="m1v-RR-Lk3" secondAttribute="leading" id="eio-v9-pyK"/>
+                            <constraint firstItem="JmO-vB-Naw" firstAttribute="top" secondItem="m1v-RR-Lk3" secondAttribute="top" id="iFf-Zc-T9i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="menuBtn" destination="Ogs-95-TWD" id="B6K-H2-aFx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L9M-uA-u2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1696.8" y="592.35382308845578"/>
+        </scene>
+        <!--ChannelVC-->
+        <scene sceneID="2wP-RX-Jvq">
+            <objects>
+                <viewController id="pm9-94-mUP" customClass="ChannelVC" customModule="Smack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RRB-IK-KaX"/>
+                        <viewControllerLayoutGuide type="bottom" id="cR9-OA-AFA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sx3-7s-wgw" customClass="GradientView" customModule="Smack" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTv-9i-nfo">
+                                <rect key="frame" x="16" y="87" width="51" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOQ-ID-9F1">
+                                <rect key="frame" x="281" y="83" width="22" height="22"/>
+                                <state key="normal" image="addChannelButton"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wFy-eU-k1O">
+                                <rect key="frame" x="16" y="572" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Wfl-rY-ePK"/>
+                                    <constraint firstAttribute="width" constant="75" id="mBX-hh-H6k"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRA-1e-A13">
+                                <rect key="frame" x="16" y="44" width="62.5" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T7W-o0-tLH">
+                                <rect key="frame" x="0.0" y="125" width="375" height="427"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jae-LT-5P5">
+                                <rect key="frame" x="111" y="593" width="46" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.95294117649999999" green="0.95294117649999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wFy-eU-k1O" firstAttribute="leading" secondItem="sx3-7s-wgw" secondAttribute="leading" constant="16" id="1KN-Wv-SxV"/>
+                            <constraint firstItem="T7W-o0-tLH" firstAttribute="top" secondItem="jOQ-ID-9F1" secondAttribute="bottom" constant="20" id="53s-B8-eDn"/>
+                            <constraint firstItem="T7W-o0-tLH" firstAttribute="leading" secondItem="sx3-7s-wgw" secondAttribute="leading" id="6r8-5V-viz"/>
+                            <constraint firstAttribute="trailing" secondItem="jOQ-ID-9F1" secondAttribute="trailing" constant="72" id="IJ0-gL-dgh"/>
+                            <constraint firstItem="jae-LT-5P5" firstAttribute="centerY" secondItem="wFy-eU-k1O" secondAttribute="centerY" id="IRF-4k-vvQ"/>
+                            <constraint firstItem="T7W-o0-tLH" firstAttribute="trailing" secondItem="sx3-7s-wgw" secondAttribute="trailing" id="LMX-i7-fhc"/>
+                            <constraint firstItem="cRA-1e-A13" firstAttribute="top" secondItem="RRB-IK-KaX" secondAttribute="bottom" constant="24" id="NpR-Dv-6fy"/>
+                            <constraint firstItem="wFy-eU-k1O" firstAttribute="top" secondItem="T7W-o0-tLH" secondAttribute="bottom" constant="20" id="Zn9-co-wRW"/>
+                            <constraint firstItem="HTv-9i-nfo" firstAttribute="leading" secondItem="sx3-7s-wgw" secondAttribute="leading" constant="16" id="gPw-iY-1ly"/>
+                            <constraint firstItem="HTv-9i-nfo" firstAttribute="top" secondItem="cRA-1e-A13" secondAttribute="bottom" constant="20" id="i2F-aS-ZT8"/>
+                            <constraint firstItem="cR9-OA-AFA" firstAttribute="top" secondItem="wFy-eU-k1O" secondAttribute="bottom" constant="20" id="kgn-yM-ihN"/>
+                            <constraint firstItem="jOQ-ID-9F1" firstAttribute="centerY" secondItem="HTv-9i-nfo" secondAttribute="centerY" id="rwO-JT-zmg"/>
+                            <constraint firstItem="jae-LT-5P5" firstAttribute="leading" secondItem="wFy-eU-k1O" secondAttribute="trailing" constant="20" id="yk2-hr-G4U"/>
+                            <constraint firstItem="cRA-1e-A13" firstAttribute="leading" secondItem="sx3-7s-wgw" secondAttribute="leading" constant="16" id="yuJ-gI-nyb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcd-GC-3MD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1696.8" y="-416.0419790104948"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="addChannelButton" width="22" height="22"/>
+        <image name="menuProfileIcon" width="99" height="99"/>
+        <image name="smackBurger" width="40" height="40"/>
+    </resources>
 </document>
