@@ -13,6 +13,8 @@
 		4422E30A1F8C5AC300934306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4422E3081F8C5AC300934306 /* LaunchScreen.storyboard */; };
 		4477BDE21F8D9B49005E8C2B /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4477BDE11F8D9B49005E8C2B /* ChatVC.swift */; };
 		4477BDE41F8D9B5D005E8C2B /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4477BDE31F8D9B5D005E8C2B /* ChannelVC.swift */; };
+		449B92301F9124E900DBC21F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B922F1F9124E900DBC21F /* Constants.swift */; };
+		449B92321F912D2000DBC21F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B92311F912D2000DBC21F /* LoginVC.swift */; };
 		44DBC2921F8DD42C00F2D375 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4477BDDC1F8D923A005E8C2B /* SWRevealViewController.m */; };
 		44DBC2941F8EA11100F2D375 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBC2931F8EA11100F2D375 /* GradientView.swift */; };
 		D2334B6CADA342837077048E /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840A1BB79E23628B6A9B9A48 /* Pods_Smack.framework */; };
@@ -30,6 +32,8 @@
 		4477BDDD1F8D923A005E8C2B /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		4477BDE11F8D9B49005E8C2B /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		4477BDE31F8D9B5D005E8C2B /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		449B922F1F9124E900DBC21F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		449B92311F912D2000DBC21F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		44DBC2931F8EA11100F2D375 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		6B7A0B1B14AC5998F89786B5 /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 		840A1BB79E23628B6A9B9A48 /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +73,7 @@
 		4422E2FE1F8C5AC300934306 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				449B922E1F9124B400DBC21F /* Utilites */,
 				4477BDE01F8D9B29005E8C2B /* Model */,
 				4477BDDF1F8D9B21005E8C2B /* View */,
 				4477BDDE1F8D9B15005E8C2B /* Controller */,
@@ -97,6 +102,7 @@
 			children = (
 				4477BDE11F8D9B49005E8C2B /* ChatVC.swift */,
 				4477BDE31F8D9B5D005E8C2B /* ChannelVC.swift */,
+				449B92311F912D2000DBC21F /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -114,6 +120,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		449B922E1F9124B400DBC21F /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+				449B922F1F9124E900DBC21F /* Constants.swift */,
+			);
+			path = Utilites;
 			sourceTree = "<group>";
 		};
 		935E3D2551516862497CC3DB /* Pods */ = {
@@ -258,9 +272,11 @@
 			files = (
 				44DBC2921F8DD42C00F2D375 /* SWRevealViewController.m in Sources */,
 				4477BDE21F8D9B49005E8C2B /* ChatVC.swift in Sources */,
+				449B92321F912D2000DBC21F /* LoginVC.swift in Sources */,
 				44DBC2941F8EA11100F2D375 /* GradientView.swift in Sources */,
 				4477BDE41F8D9B5D005E8C2B /* ChannelVC.swift in Sources */,
 				4422E3001F8C5AC300934306 /* AppDelegate.swift in Sources */,
+				449B92301F9124E900DBC21F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
