@@ -23,5 +23,5 @@ let UNWIND = "unwindToChannel"
 
 //User DefaultsFoundation
 let TOKEN_KEY = "token"
-let LOGGED_IN_KEY = "loggedIN"
+let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"

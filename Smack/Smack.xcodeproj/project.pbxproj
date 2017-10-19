@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4415EE751F97CDE40064A73D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415EE741F97CDE40064A73D /* AuthService.swift */; };
+		4415EE771F98F7760064A73D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415EE761F98F7760064A73D /* RoundedButton.swift */; };
 		4422E3001F8C5AC300934306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4422E2FF1F8C5AC300934306 /* AppDelegate.swift */; };
 		4422E3051F8C5AC300934306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4422E3031F8C5AC300934306 /* Main.storyboard */; };
 		4422E3071F8C5AC300934306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4422E3061F8C5AC300934306 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		4415EE741F97CDE40064A73D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		4415EE761F98F7760064A73D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		4422E2FC1F8C5AC300934306 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4422E2FF1F8C5AC300934306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4422E3041F8C5AC300934306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				44DBC2931F8EA11100F2D375 /* GradientView.swift */,
+				4415EE761F98F7760064A73D /* RoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44DBC2921F8DD42C00F2D375 /* SWRevealViewController.m in Sources */,
+				4415EE771F98F7760064A73D /* RoundedButton.swift in Sources */,
 				4477BDE21F8D9B49005E8C2B /* ChatVC.swift in Sources */,
 				449049061F94FDCE00E199B7 /* CreateAccountVC.swift in Sources */,
 				4415EE751F97CDE40064A73D /* AuthService.swift in Sources */,
