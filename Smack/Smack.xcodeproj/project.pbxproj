@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4415EE751F97CDE40064A73D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415EE741F97CDE40064A73D /* AuthService.swift */; };
 		4422E3001F8C5AC300934306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4422E2FF1F8C5AC300934306 /* AppDelegate.swift */; };
 		4422E3051F8C5AC300934306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4422E3031F8C5AC300934306 /* Main.storyboard */; };
 		4422E3071F8C5AC300934306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4422E3061F8C5AC300934306 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4415EE741F97CDE40064A73D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		4422E2FC1F8C5AC300934306 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4422E2FF1F8C5AC300934306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4422E3041F8C5AC300934306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4415EE731F97CDBC0064A73D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4415EE741F97CDE40064A73D /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		4422E2F31F8C5AC300934306 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 		4422E2FE1F8C5AC300934306 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				4415EE731F97CDBC0064A73D /* Services */,
 				449B922E1F9124B400DBC21F /* Utilites */,
 				4477BDE01F8D9B29005E8C2B /* Model */,
 				4477BDDF1F8D9B21005E8C2B /* View */,
@@ -276,6 +287,7 @@
 				44DBC2921F8DD42C00F2D375 /* SWRevealViewController.m in Sources */,
 				4477BDE21F8D9B49005E8C2B /* ChatVC.swift in Sources */,
 				449049061F94FDCE00E199B7 /* CreateAccountVC.swift in Sources */,
+				4415EE751F97CDE40064A73D /* AuthService.swift in Sources */,
 				449B92321F912D2000DBC21F /* LoginVC.swift in Sources */,
 				44DBC2941F8EA11100F2D375 /* GradientView.swift in Sources */,
 				4477BDE41F8D9B5D005E8C2B /* ChannelVC.swift in Sources */,
