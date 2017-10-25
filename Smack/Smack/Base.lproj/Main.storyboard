@@ -130,30 +130,29 @@
                                 <rect key="frame" x="0.0" y="125" width="375" height="427"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Llq-7R-C2W">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="Llq-7R-C2W" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Llq-7R-C2W" id="Wp2-AZ-NuN">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zb7-rA-lR8">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#general" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CT-MR-jic">
                                                     <rect key="frame" x="28" y="12" width="65.5" height="20"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="#general" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CT-MR-jic">
-                                                            <rect key="frame" x="0.0" y="0.0" width="65.5" height="20"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="zb7-rA-lR8" firstAttribute="centerY" secondItem="Wp2-AZ-NuN" secondAttribute="centerY" id="1Hp-ft-hiZ"/>
+                                                <constraint firstItem="0CT-MR-jic" firstAttribute="leading" secondItem="Wp2-AZ-NuN" secondAttribute="leadingMargin" constant="20" id="3db-Pm-IIW"/>
+                                                <constraint firstItem="0CT-MR-jic" firstAttribute="centerY" secondItem="Wp2-AZ-NuN" secondAttribute="centerY" id="LAJ-w7-6N6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="0CT-MR-jic" id="ecf-rF-lI2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -188,6 +187,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="jae-LT-5P5" id="ONb-L6-C5N"/>
+                        <outlet property="tableView" destination="T7W-o0-tLH" id="o6D-vx-qTl"/>
                         <outlet property="userImg" destination="wFy-eU-k1O" id="J6M-6k-f2X"/>
                         <segue destination="ZhV-n9-1eP" kind="show" identifier="toLogin" id="2q6-KF-BVt"/>
                     </connections>
